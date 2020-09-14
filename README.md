@@ -70,7 +70,7 @@ buildUrl("https://example.com", {
 });
 ```
 
-Here is the returned output: `"https://example.com/user/cartersnook?locale=en-us&uid=123456789&pages_visited=about,contact#follow"`! Alright, now we know the basics of using the Url Builder module, let's dive into its nice features that you might need to know. If you want to switch the position of the `queryParams` and the `hash` in the url, just set the `paramsBeforeHash` property in the options to `false`. So, you need the value of the params of the `pages_visited` param for a page to be separated by a vertical bar (|). Set the `paramsArrayValueSeparator` property to `"|"` and it will do it for you!
+Here is the returned output: `"https://example.com/user/cartersnook?locale=en-us&uid=123456789&pages_visited=about,contact#follow"`! Alright, now we know the basics of using the Url Builder module, let's dive into its nice features that you might need to know. If you want to switch the position of the `queryParams` and the `hash` in the url, just set the `paramsBeforeHash` property in the options to `false`. So, you need the value of the params of the `pages_visited` param for a page to be separated by a vertical bar |. Set the `paramsArrayValueSeparator` property to `"|"` and it will do it for you!
 
 ```ts
 buildUrl("https://example.com", {
@@ -85,4 +85,12 @@ buildUrl("https://example.com", {
 });
 ```
 
-It will now return `"https://example.com/user/cartersnook?locale=en-us&uid=123456789&pages_visited=about|contact#follow"`
+It will now return `"https://example.com/user/cartersnook?locale=en-us&uid=123456789&pages_visited=about|contact#follow"`. Thanks for reading, and I hope you enjoy using our module!
+
+Inspiration for module: [build-url](https://www.npmjs.com/package/build-url)
+
+Contributors:
+
+- [Carter Snook](https://github.com/CodingCarter)
+
+Add your own Github in a PR if you contribute please!
