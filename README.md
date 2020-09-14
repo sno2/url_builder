@@ -28,7 +28,7 @@ interface QueryParams {
 Here is an example usage:
 
 ```ts
-import { buildUrl } from "https://raw.githubusercontent.com/CodingCarter/url_builder/master/mod.ts";
+import { buildUrl } from "https://deno.land/x/url_builder/mod.ts";
 
 buildUrl("https://example.com", {
   path: "about",
