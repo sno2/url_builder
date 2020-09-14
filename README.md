@@ -87,9 +87,11 @@ buildUrl("https://example.com", {
 
 It will now return `"https://example.com/user/cartersnook?locale=en-us&uid=123456789&pages_visited=about|contact#follow"`. Thanks for reading, and I hope you enjoy using our module!
 
-Inspiration for module: [build-url](https://www.npmjs.com/package/build-url)
+## Inspiration
 
-Contributors:
+The inspiration for Url Builder was the [build-url](https://www.npmjs.com/package/build-url) npm package by [steverydz](https://github.com/steverydz)!
+
+## Contributors
 
 - [Carter Snook](https://github.com/CodingCarter)
 
