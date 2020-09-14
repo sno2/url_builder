@@ -37,30 +37,41 @@ buildUrl("https://example.com", {
 
 The above code `buildUrl` function will return `"https://example.com/about"`. Now, let's start to look at all of the options that you can take advantage of!
 
-````
+The following code will return `"https://example.com/about/me"`
 
 ```ts
 buildUrl("https://example.com", {
   path: ["about", "me"],
-}); // returns `"https://example.com/about/me"`
+});
+```
 
+The following code will return `"https://example.com?testing=true"`
+
+```ts
 buildUrl("https://example.com", {
   queryParams: {
     testing: "true",
   },
-}); // returns `"https://example.com?testing=true"`
+});
+```
 
+The following code will return `"https://example.com?testing=true1,true2"`
+
+```ts
 buildUrl("https://example.com", {
   queryParams: {
     testing: ["true1", "true2"],
   },
-}); // returns `"https://example.com?testing=true1,true2"`
+});
+```
 
+The following code will return `"https://example.com?testing=true1|true2"`
+
+```ts
 buildUrl("https://example.com", {
   queryParams: {
     testing: ["true1", "true2"],
   },
   paramsArrayValueSeparator: "|",
-}); // returns `"https://example.com?testing=true1|true2"`
+});
 ```
-````
