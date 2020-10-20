@@ -110,3 +110,15 @@ Deno.test("Force Lowercase w/ Array Path", () => {
 
   assertEquals(url, "https://example.com/about/contact");
 });
+
+Deno.test("Falsy Query Params are Ignored", () => {
+  const url = buildUrl("https://Example.com", {
+    queryParams: {
+      name: false,
+    },
+    forceLowercase: true,
+    ignoreFalseyParams: true,
+  });
+
+  assertEquals(url, "https://example.com?");
+});

@@ -7,4 +7,5 @@ export interface BuildUrlOptions {
   paramsArrayValueSeparator?: string;
   paramsBeforeHash?: boolean;
   forceLowercase?: boolean;
+  ignoreFalseyParams?: boolean;
 }

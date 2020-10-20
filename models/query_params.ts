@@ -1,3 +1,3 @@
 export interface QueryParams {
-  [queryParamKey: string]: string | string[];
+  [queryParamKey: string]: string | string[] | any | any[];
 }

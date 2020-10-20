@@ -20,6 +20,7 @@ export function buildUrl(url: string, options?: BuildUrlOptions): string {
       paramsArrayValueSeparator,
       paramsBeforeHash,
       forceLowercase,
+      ignoreFalseyParams,
     } = options;
 
     if (path) {
@@ -50,8 +51,9 @@ export function buildUrl(url: string, options?: BuildUrlOptions): string {
         } else {
           queryParamString = _queryParamValue;
         }
-
-        queries.push(`${queryParamKey}=${queryParamString}`);
+        if (!ignoreFalseyParams && _queryParamValue) {
+          queries.push(`${queryParamKey}=${queryParamString}`);
+        }
       }
 
       url += `?${queries.join("&")}`;
